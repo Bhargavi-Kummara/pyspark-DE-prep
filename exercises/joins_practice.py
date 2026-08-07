@@ -82,7 +82,7 @@ full_df = orders_df.join(customers_df, "customer_id", "full").orderBy("customer_
 print("Full outer JOIN")
 full_df.show()
 print("Comparing with union of left and right df combines")
-left_df.union(right_df).distinct().orderBy("customer_id")show()
+left_df.union(right_df).distinct().orderBy("customer_id").show()
 
 # LEFT Semi JOIN - Rows from left that have a match in Right (but no RIGHT cols)
 '''
