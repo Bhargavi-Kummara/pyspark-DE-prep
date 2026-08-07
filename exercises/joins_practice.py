@@ -81,7 +81,7 @@ right_df.show()
 full_df = orders_df.join(customers_df, "customer_id", "full").orderBy("customer_id")
 print("Full outer JOIN")
 full_df.show()
-print("Comparing with union of left and right df combines")
+print("Comparing with union of left and right df combined")
 left_df.union(right_df).distinct().orderBy("customer_id").show()
 
 # LEFT Semi JOIN - Rows from left that have a match in Right (but no RIGHT cols)
@@ -96,8 +96,7 @@ semi_df.show()
 
 # LEFT Anti JOIN - Opposite of left semi, rows from Left that have NO match in RIGHT
 '''
-SQL equivalent:
-
+#SQL equivalent:
 SELECT * FROM orders 
 WHERE customer_id NOT in (SELECT customer_id FROM customers)
 '''
